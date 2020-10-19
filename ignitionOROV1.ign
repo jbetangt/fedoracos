@@ -1,0 +1,352 @@
+{
+  "variant": "fcos",
+  "version": "1.0.0",
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "ssh_authorized_keys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDApAXeRQax5BvoRZNfIg/GR2plntua2UqiADQKIMHZ3XcSH4hyNWcQ3UD3rgm+P/KfbbKt5zsij9vzGJ5dcTzVv7TCnA6hLFtdMD5GjuETTiOMqyRsbWy7ztthjLZqWwpE/1yAJmlKjhEj/MpDXYkCTF1S7Ydtp1WHjbxrZTI/8Vq3S1TzlWIoUiTaMnLfQGRg9CwDriMqhpA16zkKQokI3xo1XhYqMLONPLpV9nlLVBHoUAPdPFNLPVyLibqHDyh8On3JI35sGLVmKmYsWHSEqaDH8p8B0kH7gxsfXYuULJJjDuB7XcpKTKY4EadCyukgQKw6B9Cnjkm650bQ/xhJ oro000088@ORO000088.local"
+        ]
+      },
+      {
+        "name": "oro000088",
+        "ssh_authorized_keys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDApAXeRQax5BvoRZNfIg/GR2plntua2UqiADQKIMHZ3XcSH4hyNWcQ3UD3rgm+P/KfbbKt5zsij9vzGJ5dcTzVv7TCnA6hLFtdMD5GjuETTiOMqyRsbWy7ztthjLZqWwpE/1yAJmlKjhEj/MpDXYkCTF1S7Ydtp1WHjbxrZTI/8Vq3S1TzlWIoUiTaMnLfQGRg9CwDriMqhpA16zkKQokI3xo1XhYqMLONPLpV9nlLVBHoUAPdPFNLPVyLibqHDyh8On3JI35sGLVmKmYsWHSEqaDH8p8B0kH7gxsfXYuULJJjDuB7XcpKTKY4EadCyukgQKw6B9Cnjkm650bQ/xhJ oro000088@ORO000088.local"
+        ],
+        "groups": [
+          "sudo",
+          "docker"
+        ]
+      },
+      {
+        "name": "openroad",
+        "ssh_authorized_keys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDApAXeRQax5BvoRZNfIg/GR2plntua2UqiADQKIMHZ3XcSH4hyNWcQ3UD3rgm+P/KfbbKt5zsij9vzGJ5dcTzVv7TCnA6hLFtdMD5GjuETTiOMqyRsbWy7ztthjLZqWwpE/1yAJmlKjhEj/MpDXYkCTF1S7Ydtp1WHjbxrZTI/8Vq3S1TzlWIoUiTaMnLfQGRg9CwDriMqhpA16zkKQokI3xo1XhYqMLONPLpV9nlLVBHoUAPdPFNLPVyLibqHDyh8On3JI35sGLVmKmYsWHSEqaDH8p8B0kH7gxsfXYuULJJjDuB7XcpKTKY4EadCyukgQKw6B9Cnjkm650bQ/xhJ oro000088@ORO000088.local"
+        ],
+        "groups": [
+          "sudo",
+          "docker"
+        ]
+      },
+      {
+        "name": "openshift",
+        "ssh_authorized_keys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDApAXeRQax5BvoRZNfIg/GR2plntua2UqiADQKIMHZ3XcSH4hyNWcQ3UD3rgm+P/KfbbKt5zsij9vzGJ5dcTzVv7TCnA6hLFtdMD5GjuETTiOMqyRsbWy7ztthjLZqWwpE/1yAJmlKjhEj/MpDXYkCTF1S7Ydtp1WHjbxrZTI/8Vq3S1TzlWIoUiTaMnLfQGRg9CwDriMqhpA16zkKQokI3xo1XhYqMLONPLpV9nlLVBHoUAPdPFNLPVyLibqHDyh8On3JI35sGLVmKmYsWHSEqaDH8p8B0kH7gxsfXYuULJJjDuB7XcpKTKY4EadCyukgQKw6B9Cnjkm650bQ/xhJ oro000088@ORO000088.local"
+        ],
+        "groups": [
+          "sudo",
+          "docker"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "disks": [
+      {
+        "device": "/dev/sdb",
+        "wipe_table": true,
+        "partitions": [
+          {
+            "size_mib": 2048,
+            "label": "var"
+          },
+          {
+            "size_mib": 2048,
+            "label": "docker"
+          },
+          {
+            "size_mib": 2048,
+            "label": "varlog"
+          },
+          {
+            "size_mib": 2048,
+            "label": "vartmp"
+          },
+          {
+            "size_mib": 2048,
+            "label": "varhome"
+          },
+          {
+            "size_mib": 2048,
+            "label": "podman"
+          }
+        ]
+      }
+    ],
+    "filesystems": [
+      {
+        "path": "/var",
+        "device": "/dev/disk/by-partlabel/var",
+        "format": "ext4"
+      },
+      {
+        "path": "/var/lib/docker",
+        "device": "/dev/disk/by-partlabel/docker",
+        "format": "ext4"
+      },
+      {
+        "path": "/var/log",
+        "device": "/dev/disk/by-partlabel/varlog",
+        "format": "ext4"
+      },
+      {
+        "path": "/var/tmp",
+        "device": "/dev/disk/by-partlabel/vartmp",
+        "format": "ext4"
+      },
+      {
+        "path": "/var/home",
+        "device": "/dev/disk/by-partlabel/varhome",
+        "format": "ext4"
+      },
+      {
+        "path": "/var/lib/containers",
+        "device": "/dev/disk/by-partlabel/podman",
+        "format": "ext4"
+      }
+    ],
+    "files": [
+      {
+        "path": "/etc/NetworkManager/system-connections/enp0s5.nmconnection",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "[connection]\ntype=ethernet\ninterface-name=enp0s5\n\n[ethernet]\nmac-address= 00:1c:42:71:ea:2b\n\n[ipv4]\nmethod=manual\naddresses=10.211.55.9/24\n"
+        }
+      },
+      {
+        "path": "/etc/issue.net",
+        "mode": 420,
+        "overwrite": true,
+        "contents": {
+          "inline": "###############################################################\n#                                   All connections are monitored and recorded                                         #\n#                          Disconnect IMMEDIATELY if you are not an authorized user!                    #\n###############################################################\n"
+        }
+      },
+      {
+        "path": "/etc/motd",
+        "mode": 420,
+        "overwrite": true,
+        "contents": {
+          "inline": "###############################################################\nWelcome to OPENROAD\n\nUNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED\nYou must have explicit, authorized permission to access or \nconfigure this device. Unauthorized attempts and actions to \naccess or use this system may result in civil and/or criminal \npenalties. All activities performed on this device are logged \nand monitored\n\nDisconnect IMMEDIATELY if you are not an authorized user!\n###############################################################\n"
+        }
+      },
+      {
+        "path": "/etc/ssh/sshd_config.d/80-abc.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "ClientAliveInterval 300\nClientAliveCountMax 0\nProtocol 2\nLogLevel INFO\nX11Forwarding yes\nMaxAuthTries 4\nIgnoreRhosts yes\nHostbasedAuthentication no\nPermitRootLogin no\nPermitEmptyPasswords no\nPermitUserEnvironment no\nMACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com\nLoginGraceTime 60\nBanner /etc/issue.net\n"
+        }
+      },
+      {
+        "path": "/etc/sysctl.d/99-abc.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "fs.suid_dumpable = 0\nnet.ipv4.conf.all.accept_source_route = 0\nnet.ipv4.conf.default.accept_source_route = 0\nnet.ipv6.conf.all.accept_source_route = 0\nnet.ipv6.conf.default.accept_source_route = 0\nnet.ipv4.conf.all.accept_redirects = 0\nnet.ipv4.conf.default.accept_redirects = 0\nnet.ipv6.conf.all.accept_redirects = 0\nnet.ipv6.conf.default.accept_redirects = 0\nnet.ipv4.conf.all.secure_redirects = 0\nnet.ipv4.conf.default.secure_redirects = 0\nnet.ipv4.conf.all.log_martians = 1\nnet.ipv4.conf.default.log_martians = 1\nnet.ipv4.icmp_echo_ignore_broadcasts = 1\nnet.ipv4.icmp_ignore_bogus_error_responses = 1\nnet.ipv4.conf.default.rp_filter=1\nnet.ipv4.conf.all.rp_filter=1\nnet.ipv4.tcp_syncookies = 1\nnet.ipv6.conf.all.accept_ra = 0\nnet.ipv6.conf.default.accept_ra = 0\n"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/cramfs.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install cramfs /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/freevxfs.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install freevxfs /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/jffs2.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install jffs2 /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/hfs.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install hfs /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/hfsplus.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install hfsplus /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/squashfs.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install squashfs /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/vfat.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install vfat /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/udf.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install udf /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/dccp.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install dccp /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/sctp.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install sctp /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/rds.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install rds /bin/true"
+        }
+      },
+      {
+        "path": "/etc/modprobe.d/tipc.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "install tipc /bin/true"
+        }
+      },
+      {
+        "path": "/etc/security/limits.conf",
+        "mode": 384,
+        "overwrite": true,
+        "contents": {
+          "inline": "* hard core 0\n"
+        }
+      },
+      {
+        "path": "/etc/passwd",
+        "mode": 420,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/shadow",
+        "mode": 384,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/group",
+        "mode": 420,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/gshadow",
+        "mode": 416,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/passwd-",
+        "mode": 420,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/shadow-",
+        "mode": 416,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/group-",
+        "mode": 420,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/gshadow-",
+        "mode": 416,
+        "overwrite": false
+      },
+      {
+        "path": "/etc/abc-cis-security",
+        "mode": 493,
+        "overwrite": true,
+        "contents": {
+          "inline": "#!/bin/sh\n\nmount -o remount,nodev,nosuid,noexec /dev/shm\n"
+        }
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "name": "var.mount",
+        "enabled": true,
+        "contents": "[Unit]\nBefore=local-fs.target\n\n[Mount]\nWhere=/var\nWhat=/dev/disk/by-partlabel/var\nType=ext4\n\n[Install]\nWantedBy=local-fs.target\n"
+      },
+      {
+        "name": "var-lib-docker.mount",
+        "enabled": true,
+        "contents": "[Unit]\nDescription=Mount ephemeral to /var/lib/docker\nBefore=local-fs.target\n\n[Mount]\nWhat=/dev/disk/by-partlabel/docker\nWhere=/var/lib/docker\nType=ext4\n\n[Install]\nWantedBy=local-fs.target\n"
+      },
+      {
+        "name": "docker.service",
+        "dropins": [
+          {
+            "name": "10-wait-docker.conf",
+            "contents": "[Unit]\nAfter=var-lib-docker.mount\nRequires=var-lib-docker.mount\n"
+          }
+        ]
+      },
+      {
+        "name": "var-lib-containers.mount",
+        "enabled": true,
+        "contents": "[Unit]\nDescription=Mount ephemeral to /var/lib/containers\nBefore=local-fs.target\n\n[Mount]\nWhat=/dev/disk/by-partlabel/podman\nWhere=/var/lib/containers\nType=ext4\n\n[Install]\nWantedBy=local-fs.target\n"
+      },
+      {
+        "name": "var-log.mount",
+        "enabled": true,
+        "contents": "[Unit]\nDescription=Mounting /var/log\n\n[Mount]\nWhere=/var/log\nWhat=/dev/disk/by-partlabel/varlog\nType=ext4\n\n[Install]\nWantedBy=multi-user.target\n"
+      },
+      {
+        "name": "var-tmp.mount",
+        "enabled": true,
+        "contents": "[Unit]\nDescription=Mounting /var/tmp\n\n[Mount]\nWhere=/var/tmp\nWhat=/dev/disk/by-partlabel/vartmp\nType=ext4\n\n[Install]\nWantedBy=multi-user.target\n"
+      },
+      {
+        "name": "var-home.mount",
+        "enabled": true,
+        "contents": "[Unit]\nDescription=Mounting /var/home\n\n[Mount]\nWhere=/var/home\nWhat=/dev/disk/by-partlabel/varhome\nType=ext4\n\n[Install]\nWantedBy=multi-user.target\n"
+      },
+      {
+        "name": "abc-cis-security.service",
+        "enabled": true,
+        "contents": "[Unit]\nDescription=K3S\nAfter=network-online.target\nWants=network-online.target\n\n[Service]\nType=oneshot\nTimeoutStartSec=0\nExecStart=/etc/abc-cis-security\n\n[Install]\nWantedBy=multi-user.target\n"
+      }
+    ]
+  }
+}
