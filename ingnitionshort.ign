@@ -1,7 +1,0 @@
-variant: fcos
-version: 1.0.0
-passwd:
-  users:
-    - name: core
-      ssh_authorized_keys:
-        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDApAXeRQax5BvoRZNfIg/GR2plntua2UqiADQKIMHZ3XcSH4hyNWcQ3UD3rgm+P/KfbbKt5zsij9vzGJ5dcTzVv7TCnA6hLFtdMD5GjuETTiOMqyRsbWy7ztthjLZqWwpE/1yAJmlKjhEj/MpDXYkCTF1S7Ydtp1WHjbxrZTI/8Vq3S1TzlWIoUiTaMnLfQGRg9CwDriMqhpA16zkKQokI3xo1XhYqMLONPLpV9nlLVBHoUAPdPFNLPVyLibqHDyh8On3JI35sGLVmKmYsWHSEqaDH8p8B0kH7gxsfXYuULJJjDuB7XcpKTKY4EadCyukgQKw6B9Cnjkm650bQ/xhJ oro000088@ORO000088.local
